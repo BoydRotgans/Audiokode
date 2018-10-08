@@ -51,7 +51,7 @@ object DirectVorbisDecoder : AudioDecoder {
         val result = engine.newBuffer()
         result.frequency = sampleRate
         result.format = format
-        engine.upload(result, rawAudioBuffer, filter)
+        engine.upload(result, rawAudioBuffer!!, filter)
 
         free(rawAudioBuffer)
         return result

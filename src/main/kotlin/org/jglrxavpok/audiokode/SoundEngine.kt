@@ -32,7 +32,7 @@ open class SoundEngine: Disposable {
     private var masterGain = 1f
 
     fun initWithDefaultOpenAL() {
-        initWithOpenAL(alcGetString(0, ALC_DEFAULT_DEVICE_SPECIFIER))
+        initWithOpenAL(alcGetString(0, ALC_DEFAULT_DEVICE_SPECIFIER)!!)
     }
 
     fun initWithOpenAL(deviceName: String) {
